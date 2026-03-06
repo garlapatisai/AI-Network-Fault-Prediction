@@ -1,0 +1,42 @@
+{
+  "best_model": "xgboost",
+  "feature_cols": [
+    "traffic_volume",
+    "latency_ms",
+    "packet_loss_pct",
+    "signal_strength_dbm",
+    "error_rate",
+    "cpu_utilisation",
+    "memory_utilisation",
+    "latency_ms_rolling_mean",
+    "latency_ms_rolling_std",
+    "packet_loss_pct_rolling_mean",
+    "packet_loss_pct_rolling_std",
+    "error_rate_rolling_mean",
+    "error_rate_rolling_std",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos"
+  ],
+  "results": {
+    "random_forest": {
+      "accuracy": 0.9925,
+      "precision": 0.8831,
+      "recall": 0.9753,
+      "f1": 0.9269
+    },
+    "xgboost": {
+      "accuracy": 0.9945,
+      "precision": 0.9068,
+      "recall": 0.989,
+      "f1": 0.9461
+    },
+    "lstm": {
+      "accuracy": 0.9623,
+      "precision": 0.6032,
+      "recall": 1.0,
+      "f1": 0.7525
+    }
+  }
+}
