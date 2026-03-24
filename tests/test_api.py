@@ -6,8 +6,8 @@ import pytest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from api.app import app
-from api.database import init_db
+from backend.app import app
+from backend.database import init_db
 
 
 @pytest.fixture

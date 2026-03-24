@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import config
-from api.database import (
+from backend.database import (
     init_db,
     insert_prediction,
     get_recent_predictions,
@@ -26,7 +26,7 @@ from api.database import (
     resolve_alert,
     get_prediction_stats,
 )
-from api.alerts import maybe_create_alert
+from backend.alerts import maybe_create_alert
 from models.predict import get_predictor
 from models.anomaly import get_detector
 

@@ -10,7 +10,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import config
-from api.database import insert_alert
+from backend.database import insert_alert
 
 
 def maybe_create_alert(node_id: str, fault_prob: float, severity: str) -> dict | None:

@@ -33,10 +33,10 @@
       "f1": 0.9461
     },
     "lstm": {
-      "accuracy": 0.9623,
-      "precision": 0.6032,
+      "accuracy": 0.7276,
+      "precision": 0.1788,
       "recall": 1.0,
-      "f1": 0.7525
+      "f1": 0.3033
     }
   }
 }

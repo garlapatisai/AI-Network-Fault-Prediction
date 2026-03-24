@@ -7,8 +7,8 @@ Usage
     python run.py generate     – Generate synthetic telecom dataset
     python run.py preprocess   – Preprocess data & create train/val/test splits
     python run.py train        – Train & evaluate ML models
-    python run.py api          – Start the Flask REST API
-    python run.py dashboard    – Start the Streamlit dashboard
+    python run.py backend      – Start the Flask REST API
+    python run.py frontend     – Start the Streamlit dashboard
     python run.py all          – Run generate → preprocess → train (no servers)
 """
 import sys
@@ -33,13 +33,13 @@ def run_script(name):
 
 
 def start_api():
-    script = os.path.join(BASE_DIR, "api", "app.py")
+    script = os.path.join(BASE_DIR, "backend", "app.py")
     print("🚀  Starting Flask API …")
     subprocess.run([sys.executable, script])
 
 
 def start_dashboard():
-    script = os.path.join(BASE_DIR, "dashboard", "app.py")
+    script = os.path.join(BASE_DIR, "frontend", "app.py")
     print("📊  Starting Streamlit Dashboard …")
     subprocess.run([sys.executable, "-m", "streamlit", "run", script, "--server.port", "8501"])
 
@@ -60,9 +60,9 @@ def main():
             run_script(step)
     elif cmd in COMMANDS:
         run_script(cmd)
-    elif cmd == "api":
+    elif cmd == "backend":
         start_api()
-    elif cmd == "dashboard":
+    elif cmd == "frontend":
         start_dashboard()
     elif cmd in ("-h", "--help", "help"):
         print_help()
